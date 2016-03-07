@@ -1,0 +1,16 @@
+# Compiler warning flags
+WARNFLAGS = -Wall -Woverloaded-virtual -Wshadow -Wconversion -Wextra
+# Compiler flags.  Use -O to optimise, -g -gdb to include debug info
+DEFAULT_CPPFLAGS = -O3 $(WARNFLAGS) -std=c++11
+#DEFAULT_CPPFLAGS = -O0 -g $(WARNFLAGS) -std=c++11
+
+# Linker flags. (e.g. for gsl, add -lgsl -lgslcblas)
+DEFAULT_LDFLAGS	=
+
+# C++ compiler
+CCC		= g++
+MPICCC		= mpic++
+
+# Install command and installation directory
+INSTALL		= install
+INSTALLDIR	= /home/ted/bin

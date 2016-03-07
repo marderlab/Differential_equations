@@ -1,0 +1,80 @@
+Testing linear differential equation (no traces, final state error):
+  acc Goal=0.001 : err=7.14899e-06, numEvals=6, numMatExp=12
+  acc Goal=0.0001 : err=2.37391e-06, numEvals=6, numMatExp=12
+  acc Goal=1e-05 : err=2.07431e-07, numEvals=6, numMatExp=12
+  acc Goal=1e-06 : err=1.92516e-08, numEvals=6, numMatExp=16
+  acc Goal=1e-07 : err=1.47674e-09, numEvals=6, numMatExp=16
+  acc Goal=1e-08 : err=7.83142e-11, numEvals=6, numMatExp=16
+  acc Goal=1e-09 : err=5.91549e-12, numEvals=6, numMatExp=16
+  acc Goal=1e-10 : err=7.50345e-13, numEvals=6, numMatExp=16
+  acc Goal=1e-11 : err=1.18134e-13, numEvals=6, numMatExp=16
+  acc Goal=1e-12 : err=8.02418e-14, numEvals=6, numMatExp=16
+Err ~ 9.75115e-07
+Err ~ 9.75115e-07
+Testing linear differential equation (with trace error):
+  acc Goal=0.001 : err=4.23272e-06, numEvals=308, numMatExp=409
+  acc Goal=0.0001 : err=2.66109e-07, numEvals=308, numMatExp=409
+  acc Goal=1e-05 : err=1.52072e-08, numEvals=308, numMatExp=409
+  acc Goal=1e-06 : err=7.96598e-10, numEvals=308, numMatExp=409
+  acc Goal=1e-07 : err=3.84104e-11, numEvals=308, numMatExp=409
+  acc Goal=1e-08 : err=3.84104e-11, numEvals=308, numMatExp=409
+  acc Goal=1e-09 : err=1.64169e-12, numEvals=310, numMatExp=413
+  acc Goal=1e-10 : err=1.82132e-13, numEvals=310, numMatExp=413
+  acc Goal=1e-11 : err=1.21979e-13, numEvals=310, numMatExp=413
+  acc Goal=1e-12 : err=1.23588e-13, numEvals=310, numMatExp=413
+Err ~ (numEvals/304.187)^-1531.08
+Err ~ (numMatrixExp/304.187)^-1531.08
+Testing non-linear differential equation (no traces, final state error):
+  acc Goal=0.001 : err=0.00160314, numEvals=32, numMatExp=57
+  acc Goal=0.0001 : err=0.000132778, numEvals=56, numMatExp=95
+  acc Goal=1e-05 : err=1.55379e-05, numEvals=106, numMatExp=169
+  acc Goal=1e-06 : err=1.81312e-06, numEvals=202, numMatExp=309
+  acc Goal=1e-07 : err=1.28834e-07, numEvals=394, numMatExp=593
+  acc Goal=1e-08 : err=7.27028e-09, numEvals=766, numMatExp=1153
+  acc Goal=1e-09 : err=4.57662e-10, numEvals=1482, numMatExp=2225
+  acc Goal=1e-10 : err=3.18089e-11, numEvals=2862, numMatExp=4295
+  acc Goal=1e-11 : err=2.10698e-12, numEvals=5534, numMatExp=8311
+  acc Goal=1e-12 : err=1.09912e-13, numEvals=10684, numMatExp=16035
+Err ~ (numEvals/6.69148)^-3.99435
+Err ~ (numMatrixExp/6.69148)^-3.99435
+Testing non-linear differential equation: (with trace error)
+  acc Goal=0.001 : err=6.54061e-07, numEvals=212, numMatExp=281
+  acc Goal=0.0001 : err=1.19124e-07, numEvals=232, numMatExp=303
+  acc Goal=1e-05 : err=1.19062e-07, numEvals=298, numMatExp=369
+  acc Goal=1e-06 : err=8.16166e-08, numEvals=410, numMatExp=525
+  acc Goal=1e-07 : err=1.74011e-08, numEvals=616, numMatExp=823
+  acc Goal=1e-08 : err=4.23725e-09, numEvals=980, numMatExp=1365
+  acc Goal=1e-09 : err=3.44347e-10, numEvals=1680, numMatExp=2415
+  acc Goal=1e-10 : err=3.4841e-11, numEvals=3104, numMatExp=4553
+  acc Goal=1e-11 : err=3.11795e-12, numEvals=5756, numMatExp=8535
+  acc Goal=1e-12 : err=2.53464e-13, numEvals=10918, numMatExp=16275
+Err ~ (numEvals/3.83494)^-3.60087
+Err ~ (numMatrixExp/3.83494)^-3.60087
+Testing stiff non-linear differential equation (no traces, final state error):
+  acc Goal=0.001 : err=3.98909e-05, numEvals=3250, numMatExp=5156
+  acc Goal=0.0001 : err=3.04842e-06, numEvals=6376, numMatExp=10253
+  acc Goal=1e-05 : err=2.60034e-07, numEvals=11938, numMatExp=18627
+  acc Goal=1e-06 : err=1.8592e-08, numEvals=22644, numMatExp=34331
+  acc Goal=1e-07 : err=1.10088e-09, numEvals=43611, numMatExp=65488
+  acc Goal=1e-08 : err=5.47334e-11, numEvals=84327, numMatExp=126494
+  acc Goal=1e-09 : err=3.52398e-12, numEvals=162943, numMatExp=244416
+  acc Goal=1e-10 : err=2.55027e-13, numEvals=314675, numMatExp=472012
+  acc Goal=1e-11 : err=1.36113e-12, numEvals=607591, numMatExp=911386
+  acc Goal=1e-12 : err=1.19626e-13, numEvals=1172963, numMatExp=1759444
+Err ~ (numEvals/139.824)^-3.4929
+Err ~ (numMatrixExp/139.824)^-3.4929
+Testing stiff non-linear differential equation (with trace error):
+  acc Goal=0.001 : err=1.44301e-05, numEvals=3739, numMatExp=5676
+  acc Goal=0.0001 : err=2.57044e-06, numEvals=6847, numMatExp=10528
+  acc Goal=1e-05 : err=3.17283e-07, numEvals=12507, numMatExp=19058
+  acc Goal=1e-06 : err=1.94186e-08, numEvals=23267, numMatExp=35004
+  acc Goal=1e-07 : err=1.67918e-09, numEvals=44119, numMatExp=66076
+  acc Goal=1e-08 : err=8.26132e-11, numEvals=84547, numMatExp=126670
+  acc Goal=1e-09 : err=4.94682e-12, numEvals=162467, numMatExp=243550
+  acc Goal=1e-10 : err=1.83352e-12, numEvals=312735, numMatExp=468952
+  acc Goal=1e-11 : err=2.19857e-12, numEvals=602859, numMatExp=904138
+  acc Goal=1e-12 : err=1.91119e-12, numEvals=1162751, numMatExp=1743976
+Err ~ (numEvals/79.8449)^-3.1035
+Err ~ (numMatrixExp/79.8449)^-3.1035
+
+Total elapsed time: 1m 37.877566s

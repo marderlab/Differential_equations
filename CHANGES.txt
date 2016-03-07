@@ -1,0 +1,84 @@
+2.0.2  Introduced use of sparse matrices (controlled by #define, off currently)
+       Split TestResults.txt into DenseResults.txt and SparseResults.txt
+
+2.0.1  Reduced redundant calculations in expSolveTaylor()
+       Updated TestResults.txt
+
+2.0.0  Introduced expSolveTaylor(), which uses Taylor series approximation
+         -faster and more accurate for large matrices
+
+1.2.0  Increased performance of automatic derivatives by avoiding computation of
+         zero derivatives and avoiding unneccessary creation/copying of objects
+       Increased speed by switching to use padeSolve3 for all matrix
+       exponentials, and dramatically upped to criterion for using
+       scaling/squaring (by factor of 10^6). Accuracy still seems okay.
+
+1.1.10 Implemented test with clamp traces (currently only non-linear test
+         actually uses it)
+       Added ability to attach traces to supplemental variables (not just state
+         variables)
+       Trace filter is no longer re-computed each time initialize() is called
+       Trace now returns error as multiple L_p norms (p = 1, 2, 4, Inf)
+
+1.1.9  Implemented test with and without recorded traces
+       Improved automatic derivatives
+       Bugfix: some matrices were not initialized, which could result in
+         segfault
+       Bugfix: traces could not attach to targets because states1 was not
+         allocated early enough       
+
+1.1.8  Bugfix: deltaT was scaled incorrectly when scaleFact was too small
+       Bugfix: stiff test was not twice-differentiable at initial time point,
+               so the initial time point has been moved to guarantee
+               differentiability over the whole interval (now test passes).
+       Made guess of first step size slightly more aggressive
+       dFStates are initialized with the proper number of variables in case
+         any are set equal to a plain double.
+       Bugfix: when number of evals/matrix exps is constant (e.g. linear case)
+         test now displays sensible results
+       Made nonlinear test somewhat more challenging
+       Created TestResults.txt to store output of current test results
+
+1.1.7  Bugfix: solve did not properly restart when convergence failed
+       Bugfix: capped shrinkage of deltaT in event of very large magnus error
+       Added stiff nonlinear differential equation test (algorithm bombs on it)
+
+1.1.6  Improved convergence
+       Simplified by removing:
+         various redundant code (PREDICT_STATE, etc)
+         lots of debugging cout statements
+       Implemented somewhat principled way of setting first deltaT
+       Changed state timepoints to m1, 0, 1, 2, 3
+
+1.1.5  More improved error order
+
+1.1.4  Improved error order by using PREDICT_STATE and explicit half-interval
+          4th-order magnus
+
+1.1.3  Improved quality of testing:
+         compute order with respect to func evaluations and matrix exponentials
+         more accuracy goals requested
+       Bugfix: predicted derivatives matrix was computed incorrectly
+       Added preprocessor #define to switch between measuring error based upon
+         differences in states vs differences in derivatives
+       Removed unneccessary references to DiffEqFunctor::coefficients
+
+1.1.2  Improved quality of testing:
+         parent class has testing routines, tests are derived classes
+         now computes order and coefficient of error
+
+1.1.1  Bugfix: removed unnecessary extra call to predictStep that was damaging
+         accuracy
+       Inserted compiler flag to remove tons of warnings coming from Eigen
+       Set verbosity=1 for linear test
+
+1.1.0  Transitioned to true variable-step algorithm (instead of computing
+         midpoint and endpoint each step)
+       Tracking number of function evaluations and matrix exponentials, which
+         is what really matters.
+
+1.0.1  Bugfix: Rounding error in time resulted in extra unneccessary time step
+               when there was no terminating trace
+       Switched to newest version of eigen (3.2)
+       A few minor changes prepping transition to true variable-step algorithm
+
